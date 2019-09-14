@@ -55,8 +55,8 @@ public class AdminProductActivity extends AppCompatActivity {
 
 
                 //inserting to the database
-                dbRef.push().setValue(product);
-
+               // dbRef.push().setValue(product);
+                    dbRef.child("Std1").setValue(product);
                 //sending feedback to the user through a toast
                 Toast.makeText(getApplicationContext(), "Added to the inventory ", Toast.LENGTH_SHORT).show();
                 clearControls();
@@ -66,7 +66,7 @@ public class AdminProductActivity extends AppCompatActivity {
         }catch(NumberFormatException e){
             Toast.makeText(getApplicationContext(), "Invalid format for quantity  ", Toast.LENGTH_SHORT).show();
         }
-    }
+    }//end of onclick method
 
 
     private void clearControls(){
