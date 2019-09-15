@@ -1,5 +1,6 @@
 package com.example.group8a;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,8 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class AdminProductActivity extends AppCompatActivity {
 
@@ -77,5 +81,67 @@ public class AdminProductActivity extends AppCompatActivity {
         textQty.setText("");
 
 
+    }//end of clear controls
+
+    public void onShow(View view){
+
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Products").child("Std1");
+        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.hasChildren()){
+                    try{
+                        textName.setText(dataSnapshot.child("name").getValue().toString());
+                        textCate.setText(dataSnapshot.child("category").getValue().toString());
+                        textColor.setText(dataSnapshot.child("color").getValue().toString());
+                        textQty.setText(dataSnapshot.child("quantity").getValue().toString());
+                    }catch(NullPointerException e){
+                        Toast.makeText(getApplicationContext(), "No data found", Toast.LENGTH_SHORT).show();
+                    }
+
+                }else
+                    Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }//end of retrieve method
+
+    public void onUpdate(View view){
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Student");
+        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.hasChild("Std1")){
+                    try{
+                        product.setName(textName.getText().toString());
+                        product.setCategory(textCate.getText().toString());
+                        product.setColor(textColor.getText().toString());
+                        product.setQuantity(Integer.parseInt(textQty.getText().toString().trim()));
+
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("Student").child("Std1");
+                        dbRef.setValue(product);
+                        clearControls();
+                        Toast.makeText(getApplicationContext(), "Data updated successfully", Toast.LENGTH_SHORT).show();
+                    }catch(NumberFormatException e){
+                        Toast.makeText(getApplicationContext(), "Invalid contact number", Toast.LENGTH_SHORT).show();
+                    }catch(NullPointerException e){
+                        Toast.makeText(getApplicationContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
+                    }//end try catch block
+
+
+                }else
+                    Toast.makeText(getApplicationContext(), "No source to update", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
+
 }
