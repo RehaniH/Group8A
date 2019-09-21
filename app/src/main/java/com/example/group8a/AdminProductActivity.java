@@ -8,6 +8,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -28,7 +29,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 public class AdminProductActivity extends AppCompatActivity {
 
@@ -44,6 +47,7 @@ public class AdminProductActivity extends AppCompatActivity {
 
     private StorageReference sRef;
     private DatabaseReference dataRef;
+    private StorageTask mUploadTask;
 
     EditText textName, textColor, textCate, textQty;
     Button btnSave, btnShow, btnUpdate, btnDelete;
@@ -83,14 +87,20 @@ public class AdminProductActivity extends AppCompatActivity {
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadFile();
+
+                if(mUploadTask != null && mUploadTask.isInProgress()){
+                    Toast.makeText(AdminProductActivity.this, "Upload in Progress", Toast.LENGTH_SHORT).show();
+                }else{
+                    uploadFile();
+                }
+
             }
         });
 
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                openProductsAcivity();
             }
         });
 
@@ -111,8 +121,9 @@ public class AdminProductActivity extends AppCompatActivity {
         if(requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
         && data != null && data.getData() != null){
             imageUri = data.getData();
+            Picasso.with(this).load(imageUri).into(imageView);
 
-            imageView.setImageURI(imageUri);
+            //imageView.setImageURI(imageUri);
 
         }
     }
@@ -123,16 +134,38 @@ public class AdminProductActivity extends AppCompatActivity {
         return mimeMap.getExtensionFromMimeType(cr.getType(uri));
     }
 
+    // Here the uploading task is done
+
+    /**
+     * This method is called by the onclicklistner
+     */
     private void uploadFile(){
 
         if(imageUri != null){
             StorageReference fileReference = sRef.child(System.currentTimeMillis() + "." +
                     getFileExtension(imageUri));
-            fileReference.putFile(imageUri)
+            mUploadTask = fileReference.putFile(imageUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
+                            /**
+                             * Here the progress bar is delayed accordingly
+                             */
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    progressBar.setProgress(0);
+                                }
+                            }, 500);
+
+                            Toast.makeText(AdminProductActivity.this, "Upload Successful", Toast.LENGTH_LONG).show();
+                            UploadImage upload = new UploadImage(imageName.getText().toString().trim(),
+                                    taskSnapshot.getUploadSessionUri().toString());
+
+                            String uploadId = dataRef.push().getKey();
+                            dataRef.child(uploadId).setValue(upload);
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -151,6 +184,7 @@ public class AdminProductActivity extends AppCompatActivity {
             Toast.makeText(this, "No Image File Selected", Toast.LENGTH_SHORT).show();
     }
 
+    // This method saves product information on the database
     public void onClickSave(View view){
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("Products");
@@ -256,5 +290,11 @@ public class AdminProductActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void openProductsAcivity(){
+        Intent intent = new Intent(this, ProductActivity.class);
+        startActivity(intent);
+    }
+
 
 }

@@ -6,27 +6,12 @@ public class Product {
     private String color;
     private String category;
     private int quantity;
-    private String mUri;
-    private String imageData;
+
 
     public Product() {
     }
 
-    public String getImageUri() {
-        return mUri;
-    }
 
-    public void setImageUri(String imageUri) {
-        this.mUri = imageUri;
-    }
-
-    public String getImageData() {
-        return imageData;
-    }
-
-    public void setImageData(String imageData) {
-        this.imageData = imageData;
-    }
 
     public String getName() {
         return name;
