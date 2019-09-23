@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("Null pointer exception occurred");
         }
 
-
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navlisnter =
@@ -75,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(this, AdminProductActivity.class);
         startActivity(intent);
     }
+
 
 
 }
