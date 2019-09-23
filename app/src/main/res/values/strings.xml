@@ -58,6 +58,16 @@
     <string name="profilema">You can now manage your account in our clothing store. Click the button below and get started!</string>
     Inventory
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Adding an image -->
+    <string name="upload">Upload</string>
+    <string name="choose">Choose</string>
+    <string name="show">Show Products</string>
 
+
+    <!-- Saving the resources-->
+    <string name="name">Name</string>
+    <string name="color">Color</string>
+    <string name="cate">Category</string>
+    <string name="quantity">Quantity</string>
+    <string name="pSave">Save</string>
 </resources>

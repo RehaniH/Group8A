@@ -7,8 +7,11 @@ public class Product {
     private String category;
     private int quantity;
 
+
     public Product() {
     }
+
+
 
     public String getName() {
         return name;
