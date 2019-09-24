@@ -36,6 +36,8 @@ public class ProductActivity extends AppCompatActivity implements ItemAdapter.On
     private ValueEventListener DBListener;
     private List<Product> uploads;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

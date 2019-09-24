@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -27,9 +28,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;*/
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -70,7 +74,8 @@ public class AdminProductActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String key = intent.getStringExtra("Key");
+        String key = null;
+        key = intent.getStringExtra("Key");
 
         if(key!= null){
             showProduct(key);
@@ -266,8 +271,27 @@ public class AdminProductActivity extends AppCompatActivity {
     }
 
     private void showProduct(String key){
-        Intent intent = new Intent(this, DisplayProductActivity.class);
-        startActivity(intent);
+        final Context context = this;
+
+        dataRef = FirebaseDatabase.getInstance().getReference().child("Items").child(key);
+
+        dataRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String imageUri;
+                imageUri =  dataSnapshot.child("mUri").getValue().toString();
+                name.setText(dataSnapshot.child("name").getValue().toString());
+                color.setText(dataSnapshot.child("color").getValue().toString());
+                quantity.setText(dataSnapshot.child("quantity").getValue().toString());
+                Picasso.with(context).load(imageUri).placeholder(R.drawable.ic_image_black_24dp).fit().centerCrop().into(imageView);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(AdminProductActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
