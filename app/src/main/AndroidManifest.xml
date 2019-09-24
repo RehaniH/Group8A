@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DisplayProductActivity"></activity>
+        <activity android:name=".AdminActivity"></activity>
+        <activity android:name=".DisplayProductActivity" />
         <activity android:name=".ProductActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SignupActivity" />

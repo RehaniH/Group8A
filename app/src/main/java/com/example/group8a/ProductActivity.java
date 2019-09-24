@@ -107,18 +107,11 @@ public class ProductActivity extends AppCompatActivity implements ItemAdapter.On
     public void OnUpdateClick(int position) {
 
         Product selectedProduct = uploads.get(position);
-        final String selectedKey = selectedProduct.getImageKey();
+        final String key = selectedProduct.getImageKey();
 
-
-        Product product = new Product();
-
-        Intent intent = new Intent(this,AdminProductActivity.class);
-        intent.putExtra("Key", selectedKey);
-
+        Intent intent = new Intent(this, AdminProductActivity.class);
+        intent.putExtra("Key", key);
         startActivity(intent);
-
-
-        databaseReference.child(selectedKey).setValue(product);
     }
 
     @Override

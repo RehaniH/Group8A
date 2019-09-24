@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-    public void toInventory(View view){
-        intent = new Intent(this, AdminProductActivity.class);
+    public void toAdmin(View view){
+        intent = new Intent(this, AdminActivity.class);
         startActivity(intent);
     }//end of method
 

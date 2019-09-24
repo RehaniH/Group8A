@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#673AB7</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#6013E9</color>
     <color name="colorAccent">#D81B60</color>
     <color name="hlightPurple">#9F7DD7</color>
     <color name="hdarkPurple">#27095E</color>
+    <color name="purple">#6534BE</color>
     <color name="grey">#E4DADE</color>
     <color name="black">#141414</color>
+    <color name="green">#009688</color>
+    <color name="hWhite">#F7F8F8</color>
+    <color name="hPink">#DB2E69</color>
+    <color name="hBlue">#2196F3</color>
 </resources>

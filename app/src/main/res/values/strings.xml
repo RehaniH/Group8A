@@ -5,8 +5,10 @@
     <string name="Heart">Wish list</string>
     <string name="Cart">cart</string>
     <string name="Profile">profile</string>
-    <string name="Inventory">Inventory</string>
-
+    <string name="Inventory">Add to Inventory</string>
+    <string name="Inquiries">Inquiries</string>
+    <string name="Products">View All Products</string>
+    <string name="Admin">Admin</string>
 
     <!--Home page String literals -->
     <string name="collection">View Collection</string>
@@ -72,6 +74,11 @@
     <string name="pSave">Save</string>
 
     <!--To choose from a selector -->
+    <string name="add_cart">Add To Cart</string>
+
+
+    <string name="contact">Contact Us</string>
+    <string name="cancel">Cancel</string>
     <string-array name="category">
         <item>dresses </item>
         <item>tops </item>
@@ -83,8 +90,4 @@
         <item>shoes </item>
         <item>accessories </item>
     </string-array>
-
-
-    <string name="add_cart">Add To Cart</string>
-    <string name="contact">Contact Us</string>
 </resources>
