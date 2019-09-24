@@ -16,16 +16,16 @@
     <string name="best">Best Sellers</string>
 
     <!--Categories page String literals -->
-    <string name="all">All</string>
-    <string name="denims">Denims</string>
-    <string name="dresses">Dresses</string>
-    <string name="linen">Linen</string>
-    <string name="shoes">Shoes</string>
-    <string name="partyWear">Party Wear</string>
-    <string name="pants">Pants</string>
-    <string name="workWear">Work Wear</string>
-    <string name="accessories">Accessories</string>
-    <string name="tops">Tops</string>
+    <string name="all">VIEW ALL</string>
+    <string name="denims">DENIMS</string>
+    <string name="dresses">DRESSES</string>
+    <string name="linen">LINEN</string>
+    <string name="shoes">SHOES</string>
+    <string name="partyWear">PARTY WEAR</string>
+    <string name="pants">PANTS</string>
+    <string name="workWear">WORK WEAR</string>
+    <string name="accessories">ACCESSORIES</string>
+    <string name="tops">TOPS</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

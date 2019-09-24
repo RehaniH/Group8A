@@ -1,8 +1,6 @@
 package com.example.group8a;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -32,6 +30,14 @@ public class HomeFragment extends Fragment {
         /*Intent intent = new Intent(getActivity(), ContactUs.class);
         startActivity(intent);*/
     }
+
+    public void toCategories(View view){
+
+        CategoriesFragment fragment = new CategoriesFragment();
+
+
+    }
+
 
 
 

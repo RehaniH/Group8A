@@ -8,331 +8,323 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginStart="10dp"
+        android:background="@color/cGrey"
 
-        >
-        <LinearLayout
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/all"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="24dp"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:baselineAligned="false">
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
 
-            <LinearLayout
-                android:id="@+id/dresses"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
+            android:background="@color/hlightPurple"
+            android:weightSum="2">
 
-                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/all"
+                android:src="@drawable/all" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/dresses"
-                    android:src="@drawable/dress" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textColor="@color/black"
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/dresses"
-                    android:textColor="@color/colorAccent" />
+                android:textSize="24sp" />
 
-            </LinearLayout>
+        </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/tops"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/tops"
 
-                    android:src="@drawable/tops" />
-
-                <TextView
-                    android:id="@+id/onetwo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/tops"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/dresses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="24dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+
+            android:background="@color/cYellow"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+
+                android:contentDescription="@string/dresses"
+                android:src="@drawable/dress" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/dresses"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+
+            android:background="@color/hWhite"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+
+                android:contentDescription="@string/tops"
+                android:src="@drawable/tops" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/tops"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/workwear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+
+            android:background="@color/cBlack"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+
+                android:contentDescription="@string/workWear"
+                android:src="@drawable/work_wear" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/workWear"
+                android:textColor="@color/hWhite"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+
+            android:background="@color/green"
             android:weightSum="2"
             >
 
-            <LinearLayout
-                android:id="@+id/workwear"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/linen"
+                android:src="@drawable/linen" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/workWear"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/linen"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
-                    android:src="@drawable/work_wear" />
+        </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/workWear"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linen"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
+        <RelativeLayout
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/linen"
-
-                    android:src="@drawable/linen" />
-
-                <TextView
-                    android:id="@+id/twotwo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/linen"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
+            android:id="@+id/denims"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="24dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+
+            android:background="@color/hBlue"
             android:weightSum="2"
-            android:baselineAligned="false">
+            >
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/denims"
+                android:src="@drawable/denims" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/denims"
-                    android:src="@drawable/denims" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/denims"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/denims"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
+        </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/pants"
-                    android:src="@drawable/pants" />
-
-                <TextView
-                    android:id="@+id/threetwo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/pants"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/pants"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="24dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+
+            android:background="@color/clPink"
             android:weightSum="2"
-            android:baselineAligned="false">
+            >
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/pants"
+                android:src="@drawable/pants" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/partyWear"
-                    android:src="@drawable/party" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/pants"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/partyWear"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
+        </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/accessories"
-                    android:src="@drawable/accessories" />
-
-                <TextView
-                    android:id="@+id/fourtwo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/accessories"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/partyWear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="24dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+
+            android:background="@color/cGold"
             android:weightSum="2"
-            android:baselineAligned="false">
+            >
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/partyWear"
+                android:src="@drawable/party" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/shoes"
-                    android:src="@drawable/shoe" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/partyWear"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/shoes"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
+        </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/accessories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:contentDescription="@string/all"
-                    android:src="@drawable/all" />
+            android:background="@color/hWhite"
+            android:weightSum="2"
+            >
 
-                <TextView
-                    android:id="@+id/fivetwo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/all"
-                    android:textColor="@color/colorAccent" />
-            </LinearLayout>
-        </LinearLayout>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/accessories"
+                android:src="@drawable/accessories" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/accessories"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+
+            android:background="@color/cPink"
+            android:weightSum="2"
+            >
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/shoes"
+                android:src="@drawable/shoe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/shoes"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+
+
+
+
+
 
 
     </LinearLayout>
