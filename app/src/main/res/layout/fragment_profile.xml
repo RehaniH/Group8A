@@ -10,7 +10,7 @@
         android:layout_width="378dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="200dp"
         android:text="@string/profilema"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="350dp"
         android:background="@color/colorAccent"
         android:text="Let us help you manage your account!"
         android:textStyle="italic" />

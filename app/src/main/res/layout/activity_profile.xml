@@ -5,16 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_profilefrag"
     tools:context=".ProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="315dp" />
-
-
-
-
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +18,7 @@
         android:paddingBottom="@dimen/cardview_default_radius"
         android:paddingLeft="@dimen/cardview_default_radius"
         android:paddingRight="@dimen/cardview_default_radius"
+        android:background="@drawable/wallpaper"
         android:paddingTop="@dimen/cardview_default_radius">
 
         <EditText
@@ -34,6 +30,7 @@
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:singleLine="true"
+            android:layout_gravity="center"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/black" />
 
@@ -47,7 +44,8 @@
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black" />
+            android:textColorHint="@android:color/black"
+            android:layout_gravity="center"/>
 
         <EditText
             android:id="@+id/password"
@@ -58,6 +56,7 @@
             android:hint="@string/enter_your_old_password"
             android:imeOptions="actionUnspecified"
             android:inputType="textPassword"
+            android:layout_gravity="center"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/black"
             android:maxLines="1"
@@ -70,6 +69,7 @@
             android:focusableInTouchMode="true"
             android:hint="@string/enter_your_new_password"
             android:inputType="textPassword"
+            android:layout_gravity="center"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/black"
             android:maxLines="1"
@@ -121,6 +121,28 @@
             android:background="@color/colorAccent"
             android:text="@string/remove"
             android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/backtodashboard"
+            style="?android:textAppearanceSmall"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="@android:color/black"
+            android:text="@string/lets_get_back_to_our_store"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/mycart"
+            style="?android:textAppearanceSmall"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:text="Gifts"
             android:textStyle="bold" />
 
         <Button
@@ -177,8 +199,5 @@
             android:textColor="@android:color/black"
             android:textStyle="bold" />
     </LinearLayout>
-
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -79,6 +79,8 @@
 
     <string name="contact">Contact Us</string>
     <string name="cancel">Cancel</string>
+    <string name="lets_get_back_to_our_store">LETS GET BACK TO OUR STORE</string>
+    <string name="my_cart">My Cart</string>
     <string-array name="category">
         <item>dresses </item>
         <item>tops </item>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
@@ -26,20 +29,16 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_login);
-
         auth=FirebaseAuth.getInstance();
 
 
-
-        if(auth.getCurrentUser() != null){
+       if(auth.getCurrentUser() != null){
             startActivity(new Intent(LoginActivity.this,ProfileActivity.class));
             finish();
         }
 
         //setting View
         setContentView(R.layout.activity_login);
-
         inputEmail =(EditText) findViewById(R.id.userEmail);
         inputPassword=(EditText) findViewById(R.id.password);
         progressBar =(ProgressBar)findViewById(R.id.progressBar);
@@ -67,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                String email= inputEmail.getText().toString();
+                final String email= inputEmail.getText().toString();
                 final String password = inputPassword.getText().toString();
 
                 if(TextUtils.isEmpty(email)){
@@ -79,6 +78,14 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
+                String uid = auth.getCurrentUser().getUid();
+
+                if (uid.equals("P2w7Qh4Zl3We3r5kt5Bnu5KMqMa2")) {
+                    Intent intent= new Intent(LoginActivity.this, AdminActivity.class);
+                    startActivity(intent);
+                    finish();
+
+                }
                 progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
