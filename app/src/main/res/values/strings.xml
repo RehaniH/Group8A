@@ -70,4 +70,21 @@
     <string name="cate">Category</string>
     <string name="quantity">Quantity</string>
     <string name="pSave">Save</string>
+
+    <!--To choose from a selector -->
+    <string-array name="category">
+        <item>dresses </item>
+        <item>tops </item>
+        <item>work wear </item>
+        <item>linen </item>
+        <item>denims </item>
+        <item>pants </item>
+        <item>party wear </item>
+        <item>shoes </item>
+        <item>accessories </item>
+    </string-array>
+
+
+    <string name="add_cart">Add To Cart</string>
+    <string name="contact">Contact Us</string>
 </resources>

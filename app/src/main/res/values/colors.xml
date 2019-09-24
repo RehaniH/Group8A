@@ -3,5 +3,8 @@
     <color name="colorPrimary">#673AB7</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="hlightPurple">#9F7DD7</color>
+    <color name="hdarkPurple">#27095E</color>
     <color name="grey">#E4DADE</color>
+    <color name="black">#141414</color>
 </resources>

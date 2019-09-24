@@ -1,17 +1,29 @@
 package com.example.group8a;
 
+import com.google.firebase.database.Exclude;
+
 public class Product {
 
     private String name;
     private String color;
     private String category;
     private int quantity;
+    private String mUri;
+
+    private String imageKey;
+
 
 
     public Product() {
     }
 
+    public String getmUri() {
+        return mUri;
+    }
 
+    public void setmUri(String mUri) {
+        this.mUri = mUri;
+    }
 
     public String getName() {
         return name;
@@ -43,5 +55,15 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Exclude
+    public String getImageKey() {
+        return imageKey;
+    }
+
+    @Exclude
+    public void setImageKey(String imageKey) {
+        this.imageKey = imageKey;
     }
 }

@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("Null pointer exception occurred");
         }
 
-    }
+
+
+    }//end of onCreate()
 
     private BottomNavigationView.OnNavigationItemSelectedListener navlisnter =
         new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -72,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
     public void toInventory(View view){
         intent = new Intent(this, AdminProductActivity.class);
         startActivity(intent);
-    }
+    }//end of method
+
 
 
 

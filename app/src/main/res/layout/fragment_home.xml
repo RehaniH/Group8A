@@ -17,13 +17,13 @@
         <LinearLayout
             android:id="@+id/home"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="520dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="520dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="0dp"
                 android:layout_marginStart="0dp"
                 android:contentDescription="@string/Home"
@@ -114,7 +114,32 @@
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
 
+            <Button
+                android:id="@+id/contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/contact"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+
+
+
+                />
+
+
+
+        </LinearLayout>
 
 
 
