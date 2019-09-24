@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseError;
@@ -44,6 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user == null) {
                     startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
+
                     finish();
                 }
             }
@@ -119,8 +122,6 @@ public class ProfileActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-
-
                 }
             }
         });
@@ -238,7 +239,6 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -269,8 +269,6 @@ public class ProfileActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"data:"+bundle.getString("some"),Toast.LENGTH_SHORT).show();
             }
         }
-
-
     }
 
     // sign out method

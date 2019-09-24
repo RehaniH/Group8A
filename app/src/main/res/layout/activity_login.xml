@@ -13,6 +13,16 @@
         android:gravity="center"
         android:orientation="vertical">
 
+
+        <TextView
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SIGN IN"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -56,6 +66,15 @@
             android:text="@string/login"
             android:textColor="@android:color/black" />
 
+
+        <Button
+            android:id="@+id/btn_admin"
+            android:layout_width="218dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:text="Admin"
+            android:textColor="@color/colorAccent" />
 
         <Button
             android:id="@+id/btn_reset_password"

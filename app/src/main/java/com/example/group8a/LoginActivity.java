@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
-    private Button btnSignup, btnLogin, btnReset;
+    private Button btnSignup, btnLogin, btnReset, btnAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         btnSignup=(Button) findViewById(R.id.btn_signup);
         btnLogin=(Button) findViewById(R.id.btn_login);
         btnReset=(Button) findViewById(R.id.btn_reset_password);
+        btnAdmin=(Button) findViewById(R.id.btn_admin);
 
         auth= FirebaseAuth.getInstance();
 
@@ -78,14 +79,6 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                String uid = auth.getCurrentUser().getUid();
-
-                if (uid.equals("P2w7Qh4Zl3We3r5kt5Bnu5KMqMa2")) {
-                    Intent intent= new Intent(LoginActivity.this, AdminActivity.class);
-                    startActivity(intent);
-                    finish();
-
-                }
                 progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
@@ -106,5 +99,17 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
+
+        btnAdmin.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(LoginActivity.this, AdminActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
     }
 }
