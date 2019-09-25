@@ -12,15 +12,26 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
+
 public class HomeFragment extends Fragment {
 
     Button contactUs, cate;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
+        contactUs= (Button) v.findViewById(R.id.contact1);
+
+        contactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CustomerContactUs.class);
+                startActivity(intent);
+            }
+        });
         cate = v.findViewById(R.id.collection);
 
         cate.setOnClickListener(new View.OnClickListener() {
@@ -31,14 +42,10 @@ public class HomeFragment extends Fragment {
                 startActivity(in);
             }
         });
+        return v;
 
-        return inflater.inflate(R.layout.fragment_home, container, false);
-    }
 
-    public void toContactUs(View view){
 
-        /*Intent intent = new Intent(getActivity(), ContactUs.class);
-        startActivity(intent);*/
     }
 
     public void toCategories(View view){

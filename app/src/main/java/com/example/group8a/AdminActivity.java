@@ -35,8 +35,8 @@ public class AdminActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //Hashini Add yours
-                /*Intent intent = new Intent(AdminActivity.this, AdminProductActivity.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(AdminActivity.this, ContactUsAdmin.class);
+                startActivity(intent);
             }
         });
 
