@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Space
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="213dp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="119dp" />
 
     <Button
         android:id="@+id/button"
@@ -13,8 +18,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15sp"
         android:layout_marginRight="15sp"
-        android:background="@color/nPink"
+
+        android:background="@color/colorAccent"
         android:text="MY CART"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="18sp" />
 
     <Space
@@ -27,9 +34,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15sp"
         android:layout_marginRight="15sp"
-        android:background="@color/nPink"
-        android:onClick="clickbutton"
+        android:background="@color/colorAccent"
+        android:onClick="startact"
         android:text="DELIVERY OPTIONS"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="18sp" />
 
     <Space
@@ -42,8 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15sp"
         android:layout_marginRight="15sp"
-        android:background="@color/nPink"
+        android:background="@color/colorAccent"
         android:text="GIFTING OPTIONS"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="18sp" />
 
     <Space
@@ -56,7 +65,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15sp"
         android:layout_marginRight="15sp"
-        android:background="@color/nPink"
+        android:background="@color/colorAccent"
         android:text="PAYMENTS"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="18sp" />
 </LinearLayout>
+</ScrollView>

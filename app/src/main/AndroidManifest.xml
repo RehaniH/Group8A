@@ -18,6 +18,12 @@
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".AdminProductActivity" />
+        <activity android:name=".deliveryoptions"/>
+        <activity android:name=".finalview"/>
+        <activity android:name=".giftting_options"/>
+        <activity android:name="HeadlineFragment"/>
+        <activity android:name=".newaddress"/>
+        <activity android:name=".Payments"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

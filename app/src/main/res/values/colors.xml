@@ -21,4 +21,6 @@
     <color name="cPink">#E91E63</color>
     <color name="cOrange">#FF5722</color>
     <color name="clPink">#F1B7C9</color>
+    <color name="nPink">#D81B60</color>
+    <color name="nWhite">#FBFCFC</color>
 </resources>

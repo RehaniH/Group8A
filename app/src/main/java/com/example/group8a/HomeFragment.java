@@ -23,7 +23,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
-        contactUs= (Button) v.findViewById(R.id.contact1);
+        contactUs= (Button) v.findViewById(R.id.contact_us);
 
         contactUs.setOnClickListener(new View.OnClickListener() {
             @Override

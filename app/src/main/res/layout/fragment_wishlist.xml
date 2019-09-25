@@ -3,12 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WishlistFragment">
+    android:background="@drawable/tops"
+    tools:context=".WishlistFragment" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/Heart" />
+
+    <Button
+        android:id="@+id/wishlistButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp"
+        android:background="@color/colorAccent"
+        android:clickable="true"
+        android:text="You should login first"
+        android:textStyle="italic" />
 
 </FrameLayout>

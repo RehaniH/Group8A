@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="18dp" />
+
+<TextView
+    android:id="@+id/textView6"
+    android:layout_width="267dp"
+    android:layout_height="wrap_content"
+    android:text="GIFTING OPTIONS"
+    android:layout_marginLeft="60sp"
+    android:layout_marginRight="15sp"
+    android:textColor="@color/colorAccent"
+    android:textSize="30sp" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="22dp" />
+
+<Switch
+    android:id="@+id/switch1"
+    android:layout_width="244dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15sp"
+    android:layout_marginRight="15sp"
+    android:text="Send this as a gift" />
+
+<RadioButton
+    android:id="@+id/radioButton6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15sp"
+    android:layout_marginRight="15sp"
+    android:text="Wrapped in a paper" />
+
+<ImageView
+    android:id="@+id/imageView15"
+    android:layout_width="122dp"
+    android:layout_height="92dp"
+    app:srcCompat="@drawable/five" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="12dp" />
+
+<ImageView
+    android:id="@+id/imageView17"
+    android:layout_width="122dp"
+    android:layout_height="92dp"
+    app:srcCompat="@drawable/one" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="12dp" />
+
+<ImageView
+    android:id="@+id/imageView18"
+    android:layout_width="122dp"
+    android:layout_height="92dp"
+    app:srcCompat="@drawable/three" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="10dp" />
+
+<ImageView
+    android:id="@+id/imageView19"
+    android:layout_width="122dp"
+    android:layout_height="92dp"
+    app:srcCompat="@drawable/two" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="26dp" />
+
+<RadioButton
+    android:id="@+id/radioButton7"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15sp"
+    android:layout_marginRight="15sp"
+    android:text="Gift in box" />
+
+<EditText
+    android:id="@+id/editText9"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15sp"
+    android:layout_marginRight="15sp"
+    android:ems="10"
+    android:hint="Add any comments"
+    android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:background="@color/colorAccent"
+            android:text="CONTINUE"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="24sp" />
+
+    </LinearLayout>>
+
+</ScrollView>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="34dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60sp"
+        android:layout_marginRight="15sp"
+        android:text="ADD NEW ADDRESS"
+        android:textColor="@color/colorAccent"
+        android:textColorLink="#E91E63"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="23dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70sp"
+        android:layout_marginRight="15sp"
+        android:text="Enter details of your new address" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="17dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:hint="Your Name*"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:hint="Address Line1, *"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:hint="Address Line 2, *"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:hint="City *"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:inputType="textPersonName"
+        android:text="Sri Lanka" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:hint="Zip Code *"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:hint="Phone Number"
+        android:inputType="phone" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="46dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_height="wrap_content"
+        android:text="Set as default address" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:background="@color/colorAccent"
+            android:text="SAVE ADDRESS"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+</LinearLayout>
+</ScrollView>

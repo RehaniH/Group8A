@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case R.id.Like : fragment = new WishlistFragment();
                             break;
-                        case R.id.Cart : fragment = new CartFragment();
+                        case R.id.Cart :  fragment = new HeadlineFragment();
                             break;
                         case R.id.Profile : fragment = new ProfileFragment();
                             break;

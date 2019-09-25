@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="27dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="PAYMENTS"
+        android:layout_marginLeft="90sp"
+        android:layout_marginRight="15sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:text="Pay with PayPal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:background="@color/colorAccent"
+        android:text="CONTINUE"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+</LinearLayout>
