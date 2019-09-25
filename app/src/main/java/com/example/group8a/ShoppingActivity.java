@@ -7,25 +7,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductActivity extends AppCompatActivity implements ItemAdapter.OnItemClickListener {
+public class ShoppingActivity extends AppCompatActivity implements ItemAdapter.OnItemClickListener{
 
     private RecyclerView recyclerView;
     private ItemAdapter itemAdapter;
@@ -36,27 +32,21 @@ public class ProductActivity extends AppCompatActivity implements ItemAdapter.On
     private ValueEventListener DBListener;
     private List<Product> uploads;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.activity_shopping);
 
-       // Bundle bundle = getIntent().getExtras();
-
-        recyclerView = findViewById(R.id.recycler_layout);
+        recyclerView = findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        progress_circle = findViewById(R.id.progress_circle);
+        progress_circle = findViewById(R.id.circle);
 
         uploads = new ArrayList<>();
-        itemAdapter = new ItemAdapter(ProductActivity.this, uploads);
+        itemAdapter = new ItemAdapter(ShoppingActivity.this, uploads);
         recyclerView.setAdapter(itemAdapter);
-        itemAdapter.setOnClickItemListener(ProductActivity.this);
+        itemAdapter.setOnClickItemListener(ShoppingActivity.this);
 
         storage = FirebaseStorage.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Items");
@@ -70,7 +60,7 @@ public class ProductActivity extends AppCompatActivity implements ItemAdapter.On
                     try {
                         product.setImageKey(postSnapShot.getKey());
                     }catch (NullPointerException e){
-                        Toast.makeText(ProductActivity.this,"Exception occured", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ShoppingActivity.this,"Exception occured", Toast.LENGTH_SHORT).show();
                     }
                     uploads.add(product);
 
@@ -83,68 +73,31 @@ public class ProductActivity extends AppCompatActivity implements ItemAdapter.On
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(ProductActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ShoppingActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), "In able to read data", Toast.LENGTH_SHORT).show();
                 progress_circle.setVisibility(View.INVISIBLE);
             }
         });
-
     }
 
     @Override
     public void OnItemClick(int position) {
-
         Product selectedProduct = uploads.get(position);
         final String key = selectedProduct.getImageKey();
 
         Intent intent = new Intent(this, DisplayProductActivity.class);
         intent.putExtra("Key", key);
         startActivity(intent);
-
     }
 
     @Override
     public void OnUpdateClick(int position) {
 
-        Product selectedProduct = uploads.get(position);
-        final String key = selectedProduct.getImageKey();
-
-        Intent intent = new Intent(this, AdminProductActivity.class);
-        intent.putExtra("Key", key);
-        startActivity(intent);
     }
 
     @Override
     public void OnDeleteClick(int position) {
 
-        Product selectedProduct = uploads.get(position);
-        final String selectedKey = selectedProduct.getImageKey();
-
-        StorageReference imageReference = storage.getReferenceFromUrl(selectedProduct.getmUri());
-
-        imageReference.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                databaseReference.child(selectedKey).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(ProductActivity.this, "Successfully Deleted", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(ProductActivity.this, "cannot Delete record", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(ProductActivity.this, "Error ", Toast.LENGTH_SHORT).show();
-            }
-        });
-        
     }
 
     @Override

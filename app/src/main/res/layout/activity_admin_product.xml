@@ -84,11 +84,12 @@
 
                     <EditText
                         android:id="@+id/name"
-                        android:labelFor="@+id/txt_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="37dp"
-                        android:inputType="text"/>
+                        android:inputType="text"
+                        android:labelFor="@+id/txt_name"
+                        android:textColor="@color/hdarkPurple" />
 
                 </LinearLayout>
 
@@ -109,13 +110,13 @@
 
                     <EditText
                         android:id="@+id/color"
-                        android:labelFor="@+id/txt_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40dp"
                         android:inputType="text"
+                        android:labelFor="@+id/txt_color"
 
-                        />
+                        android:textColor="@color/hdarkPurple" />
 
                 </LinearLayout>
 
@@ -140,7 +141,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:inputType="text"
-                        />
+                        android:textColor="@color/hdarkPurple" />
 
                 </LinearLayout>
 
@@ -161,12 +162,12 @@
 
                     <EditText
                         android:id="@+id/quantity"
-                        android:labelFor="@+id/txt_quantity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:inputType="number"
-                        />
+                        android:labelFor="@+id/txt_quantity"
+                        android:textColor="@color/hdarkPurple" />
 
                 </LinearLayout>
 
